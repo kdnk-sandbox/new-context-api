@@ -19,12 +19,14 @@ export class ThemeProvider extends React.Component {
 
 export class ThemeConsumer extends React.Component {
   render() {
-    <ThemeContext.Consumer>
-      { theme => (
-        <div>
-          {theme}
-        </div>
-      ) }
-    </ThemeContext.Consumer>
+    return (
+      <ThemeContext.Consumer>
+        { theme => (
+          <div>
+            {theme}
+          </div>
+        ) }
+      </ThemeContext.Consumer>
+    );
   }
 }
