@@ -4,7 +4,7 @@ import { ThemeProvider, ThemeConsumer } from "./ThemeContext";
 
 const styles = {
   fontFamily: "sans-serif",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 const App = () => (
