@@ -1,20 +1,19 @@
-import React from 'react';
+import React from "react";
+import { render } from "react-dom";
 
 const ThemeContext = React.createContext();
 
 export class ThemeProvider extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      theme: 'light',
-    };
-  }
+  state = {
+    theme: "light"
+  };
 
   render() {
-    <ThemeContext.Provider vlaue={this.state.theme}>
-      { this.props.children }
-    </ThemeContext.Provider>
+    return (
+      <ThemeContext.Provider value={{ state: this.state }}>
+        {this.props.children}
+      </ThemeContext.Provider>
+    );
   }
 }
 
@@ -22,11 +21,7 @@ export class ThemeConsumer extends React.Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        { theme => (
-          <div>
-            {theme}
-          </div>
-        ) }
+        {context => <div>{context.state.theme}</div>}
       </ThemeContext.Consumer>
     );
   }

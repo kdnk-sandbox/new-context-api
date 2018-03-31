@@ -10,12 +10,9 @@ const styles = {
 const App = () => (
   <ThemeProvider>
     <div style={styles}>
-      <Hello name="CodeSandbox" />
-      <h2>Start editing to see some magic happen {"\u2728"}</h2>
       <div>
         <div>
-          <ThemeConsumer>
-          </ThemeConsumer>
+          <ThemeConsumer />
         </div>
       </div>
     </div>
