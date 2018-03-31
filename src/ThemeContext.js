@@ -5,6 +5,7 @@ const ThemeContext = React.createContext();
 export class ThemeProvider extends React.Component {
 
   constructor(props) {
+    super(props);
     this.state = {
       theme: 'light',
     };
